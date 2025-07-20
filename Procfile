@@ -1,0 +1,1 @@
+web: gunicorn markandtina2025.wsgi
