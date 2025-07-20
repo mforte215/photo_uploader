@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% block title %}Photo Gallery{% endblock %}
+{% block content %}
+  <h1>Gallery</h1>
+  <div class="grid">
+    {% for photo in photos %}
+      <img src="{{ photo.image.url }}" alt="Photo {{ forloop.counter }}">
+    {% empty %}
+      <p>No photos yet.</p>
+    {% endfor %}
+  </div>
+{% endblock %}
