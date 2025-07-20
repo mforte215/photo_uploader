@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+  margin: 2rem;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.grid img {
+  max-width: 200px;
+  border: 1px solid #ccc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+/* Images fill their grid cell */
+.grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  body {
+    margin: 1rem;
+    font-size: 0.95rem;
+  }
+
+  nav a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}
